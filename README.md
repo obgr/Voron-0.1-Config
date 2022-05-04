@@ -18,7 +18,7 @@ printer.cfg includes subconfig and submacros from config.d and macros.d respecti
 
 ## Planned changes
 - [Klicky probe](https://github.com/jlas1/Klicky-Probe)
-- [TriZero](https://github.com/zruncho3d/tri-zero)
+- [Tri-Zero](https://github.com/zruncho3d/tri-zero)
 
 # How do i use a git repo as config dir?
 When you clone a repo, the name of the repository will most likely not be klipper_config.
