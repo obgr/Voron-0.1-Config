@@ -1,5 +1,5 @@
 # Work in progress!
-# Voron Trident To be serialized
+# Voron 0.1 To be serialized
 
 ## Repo layout
 printer.cfg includes subconfig and submacros from config.d and macros.d respectively.
