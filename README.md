@@ -1,5 +1,5 @@
 # Work in progress!
-# Voron Trident To be serialized
+# Voron 0.1 To be serialized
 
 ## Repo layout
 printer.cfg includes subconfig and submacros from config.d and macros.d respectively.
@@ -7,6 +7,8 @@ printer.cfg includes subconfig and submacros from config.d and macros.d respecti
 ## Hardware
 - Voron 0.1
   - LDO Kit
+  - [Bondtech LGX Lite](https://www.bondtech.se/product/lgx-lite-extruder-custom/)
+  - [E3D Revo voron](https://e3d-online.com/products/revo-voron)
 
 ## Software
 - [Klipper](https://github.com/Klipper3d/klipper)
@@ -17,8 +19,8 @@ printer.cfg includes subconfig and submacros from config.d and macros.d respecti
 
 
 ## Planned changes
-- [Klicky probe](https://github.com/jlas1/Klicky-Probe)
 - [Tri-Zero](https://github.com/zruncho3d/tri-zero)
+- [Klicky probe](https://github.com/jlas1/Klicky-Probe) or similar
 
 # How do i use a git repo as config dir?
 When you clone a repo, the name of the repository will most likely not be klipper_config.
