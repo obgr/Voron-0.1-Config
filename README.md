@@ -42,11 +42,11 @@ git clone git@github.com:USER/Voron-0.1-config.git
 ```
 Remove klipper_config folder.
 ```
-rm -rf klipper_config/
+rm -rf ~/printer_data/config/
 ```
 Create a symbolic link named klipper_config that points to your repository
 ```
-ln -s Voron-0.1-config/ klipper_config
+ln -s ~/Voron-0.1-config ~/printer_data/config
 ```
 
 Klipper will now read config from your repository via the symbolic link.
