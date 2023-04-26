@@ -45,16 +45,39 @@ pins: PA12
 [thermocouple]
 
 [printer]
-kinematics: corexy
+kinematics: cartesian
 max_velocity: 500
 max_accel: 3000
 max_z_velocity: 25
 max_z_accel: 30
 
-#####################################################################
-#      X/Y Stepper Settings
-#####################################################################
+[tmc2209 stepper_x]
+uart_pin: ar100:PE16
+uart_address: 0
+run_current: 0.500
+hold_current: 0.500
+stealthchop_threshold: 250
 
+[tmc2209 stepper_y]
+uart_pin: ar100:PE16
+uart_address: 1
+run_current: 0.500
+hold_current: 0.500
+stealthchop_threshold: 250
+
+[tmc2209 stepper_z]
+uart_pin: ar100:PE16
+uart_address: 2
+run_current: 0.500
+hold_current: 0.500
+stealthchop_threshold: 250
+
+[tmc2209 extruder]
+uart_pin: ar100:PE16
+uart_address: 3
+run_current: 0.500
+hold_current: 0.500
+stealthchop_threshold: 250
 
 [stepper_x]
 step_pin: ar100:PL4
@@ -66,13 +89,6 @@ position_endstop: 0
 position_max: 200
 homing_speed: 2.0
 
-[tmc2209 stepper_x]
-uart_pin: ar100:PE16
-uart_address: 0
-run_current: 0.500
-hold_current: 0.500
-stealthchop_threshold: 250
-
 [stepper_y]
 step_pin: ar100:PL5
 dir_pin: ar100:PE9
@@ -83,19 +99,6 @@ position_endstop: 0
 position_max: 200
 homing_speed: 2.0
 
-[tmc2209 stepper_y]
-uart_pin: ar100:PE16
-uart_address: 1
-run_current: 0.500
-hold_current: 0.500
-stealthchop_threshold: 250
-
-#####################################################################
-#   Z Stepper Settings
-#####################################################################
-
-# Z0, Z1, Z2
-
 [stepper_z]
 step_pin: ar100:PL6
 dir_pin: ar100:PE10
@@ -105,23 +108,6 @@ microsteps: 16
 position_endstop: 0
 position_max: 200
 homing_speed: 2.0
-
-[tmc2209 stepper_z]
-uart_pin: ar100:PE16
-uart_address: 2
-run_current: 0.500
-hold_current: 0.500
-stealthchop_threshold: 250
-#####################################################################
-#   E Stepper Settings
-#####################################################################
-
-[tmc2209 extruder]
-uart_pin: ar100:PE16
-uart_address: 3
-run_current: 0.500
-hold_current: 0.500
-stealthchop_threshold: 250
 
 [extruder]
 step_pin: ar100:PL7
@@ -181,9 +167,9 @@ max_temp: 300
 heater_pin: PA11
 sensor_type: EPCOS 100K B57560G104F
 sensor_pin: PA3
-control: pid
-min_temp: 0
-max_temp: 120
+control: watermark
+min_temp: -272
+max_temp: 300
 
 [fan]
 pin: PF0
@@ -199,7 +185,7 @@ pin: PB5
 [temperature_fan board]
 pin: PB4
 min_temp: 0
-max_temp: 1
+max_temp: 100
 sensor_type: EPCOS 100K B57560G104F
 sensor_pin: PA6
 control: watermark
