@@ -1,6 +1,6 @@
 # Tri Zero.1½ To be serialized
 
-Work in progress!
+Work in progress! config is not finalized.
 
 ## Repo layout
 
