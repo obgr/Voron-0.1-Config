@@ -55,6 +55,9 @@ git clone git@github.com:USER/Voron-0.1-config.git
 Remove klipper_config folder.
 
 ```bash
+# Move old config dir for backup
+mv ~/printer_data/config/ ~/printer_data/config_bak/
+# or remove the dir.
 rm -rf ~/printer_data/config/
 ```
 
