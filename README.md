@@ -28,7 +28,7 @@ printer.cfg includes subconfig and submacros from config.d and macros.d respecti
 - [ZeroClick](https://github.com/zruncho3d/ZeroClick)
 - [Dragon Burner v6](https://github.com/chirpy2605/voron/tree/main/V0/Dragon_Burner)
 
-## Config and fun caviats
+## Config and fun caveats
 - Sensorless homing for X & Y
 - 3 Point Print Bed Leveling
   - in a small formfactor
