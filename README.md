@@ -18,18 +18,20 @@ printer.cfg includes subconfig and submacros from config.d and macros.d respecti
 
 ## Software
 
-- [Refactor (armbian based, runs on the recore)](https://wiki.iagent.no/wiki/Refactor)
+- [Rebuild (Armbian which runs on the recore)](https://github.com/intelligent-agent/Rebuild)
   - [Klipper](https://github.com/Klipper3d/klipper)
+  - [Fluidd](https://github.com/fluidd-core/fluidd)
 
 ## Mods
 
 - [Tri-Zero](https://github.com/zruncho3d/tri-zero)
 - [ZeroClick](https://github.com/zruncho3d/ZeroClick)
-- [Mini Stealth](https://www.teamfdm.com/files/file/616-mini-stealth-lgx-lite/)
+- [Dragon Burner v6](https://github.com/chirpy2605/voron/tree/main/V0/Dragon_Burner)
 
-## Planned changes
-
-- [Klicky probe](https://github.com/jlas1/Klicky-Probe) or similar
+## Config and fun caviats
+- Sensorless homing for X & Y
+- 3 Point Print Bed Leveling
+  - in a small formfactor
 
 ## How do i use a git repo as config dir?
 
@@ -49,7 +51,7 @@ Clone a repo
 
 ```bash
 cd
-git clone git@github.com:USER/Voron-0.1-config.git
+git clone https://github.com/obgr/voron-v0-config.git
 ```
 
 Remove klipper_config folder.
@@ -64,7 +66,7 @@ rm -rf ~/printer_data/config/
 Create a symbolic link named klipper_config that points to your repository
 
 ```bash
-ln -s ~/Voron-0.1-config ~/printer_data/config
+ln -s ~/voron-v0-config/ ~/printer_data/config
 ```
 
 Klipper will now read config from your repository via the symbolic link.
