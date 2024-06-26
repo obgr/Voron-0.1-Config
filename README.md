@@ -1,4 +1,4 @@
-# Tri Zero.1½ To be serialized
+# Tri Zero.1½ V0.2856
 
 Work in progress! config is not finalized.
 
@@ -26,7 +26,7 @@ printer.cfg includes subconfig and submacros from config.d and macros.d respecti
 
 - [Tri-Zero](https://github.com/zruncho3d/tri-zero)
 - [ZeroClick](https://github.com/zruncho3d/ZeroClick)
-- [Dragon Burner v6](https://github.com/chirpy2605/voron/tree/main/V0/Dragon_Burner)
+- [Dragon Burner v7](https://github.com/chirpy2605/voron/tree/main/V0/Dragon_Burner)
 
 ## Config and fun caveats
 - Sensorless homing for X & Y
@@ -35,43 +35,19 @@ printer.cfg includes subconfig and submacros from config.d and macros.d respecti
 
 ## How do i use a git repo as config dir?
 
-When you clone a repo, the name of the repository will most likely not be klipper_config.
-
-There is a way to link your config repo to be read from a standard configured klipper install.
-
-*This is done with <mark>Symbolic links</mark>*.
-
-### Preparation
-
-Generate and add an ssh key to github to upload config changes direct to github.
-
-### Symbolic link magic
-
 Clone a repo
 
 ```bash
-cd
-git clone https://github.com/obgr/voron-v0-config.git
+cd ~/printer_data/
+# Delete old config directory
+rm -rf config
+# git clone
+git clone https://github.com/obgr/voron-v0-config.git config
 ```
 
-Remove klipper_config folder.
+## Symbolic links
 
-```bash
-# Move old config dir for backup
-mv ~/printer_data/config/ ~/printer_data/config_bak/
-# or remove the dir.
-rm -rf ~/printer_data/config/
-```
-
-Create a symbolic link named klipper_config that points to your repository
-
-```bash
-ln -s ~/voron-v0-config/ ~/printer_data/config
-```
-
-Klipper will now read config from your repository via the symbolic link.
-
-If you want, you can also create a link to your newly generated klipper.bin to always have it available in your config directory.
+If you want, you can create a symbolic link to your newly generated klipper.bin to always have it available in your config directory.
 
 ```bash
 ln -s ~/klipper/out/klipper.bin ~/klipper_config/klipper.bin
